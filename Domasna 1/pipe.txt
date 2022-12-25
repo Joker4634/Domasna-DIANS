@@ -1,1 +1,0 @@
-C:\Users\ivans\OneDrive\Desktop\dians pr>osmfilter macedonia-latest.osm --keep=amenity=pharmacy --keep=name='*' | osmconvert64.exe - --all-to-nodes --csv="@id @lon @lat name opening_hours phone website addr:street" --csv-separator=" | " -o="Final.csv"
