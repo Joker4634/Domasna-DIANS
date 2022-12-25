@@ -19,12 +19,12 @@ public class DataInsert {
 
     @PostConstruct
     public void init() throws FileNotFoundException {
-        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\38970\\Desktop\\DIANS\\Domasna-DIANS\\Domashna 3\\tech prototype\\pharmacies-master\\final.txt"));
-      // String name, String location, String workingTime, Double lon, Double lat, String phoneNumber, String city, String website
-        br.lines().forEach(i->{
-                   String [] line = i.split("\\|");
-                   pharmacyRepository.save(new Pharmacy(line[2], line[3], line[7],
-                           Double.parseDouble(line[0]), Double.parseDouble(line[1]), line[5], line[4], line[6]));
-               });
-   }
+//        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\38970\\Desktop\\DIANS\\Domasna-DIANS\\Domashna 3\\tech prototype\\pharmacies-master\\final.txt"));
+//      // String name, String location, String workingTime, Double lon, Double lat, String phoneNumber, String city, String website
+//        br.lines().forEach(i->{
+//                   String [] line = i.split("\\|");
+//                   pharmacyRepository.save(new Pharmacy(line[2], line[3], line[7],
+//                           Double.parseDouble(line[0]), Double.parseDouble(line[1]), line[5], line[4], line[6]));
+//               });
+  }
 }
