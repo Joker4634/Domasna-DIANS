@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/home")
 public class MainController {
     private final PharmacyService pharmacyService;
 
@@ -39,16 +39,6 @@ public class MainController {
         model.addAttribute("list", pharmacyService.listAllPharmacies());
         return "search";
     }
-    @GetMapping("/demoUserRegister")
-    public String demoUserRegister(Model model)
-    {
-        return "demoUserRegister";
-    }
-    @GetMapping("/demoUserLogin")
-    public String demoUserLogin(Model model)
-    {
-        return "demoUserLogin";
-    }
     @PostMapping("/search")
     public String postSearchPharmacy(Model model, @RequestParam String city)
     {
@@ -59,7 +49,7 @@ public class MainController {
         return "search";
     }
 
-    @PostMapping("/addPharmacy")
+    @PostMapping("/add")
     public String addPharmacy(Model model,
                               @RequestParam String name,
                               @RequestParam String location,
@@ -81,5 +71,11 @@ public class MainController {
                 +"***");
         pharmacyService.savePharmacy(new Pharmacy(name,location,workingTime,lat,lon,phoneNumber,city,website));
         return "search";
+    }
+    @GetMapping("/getClosestPharmacy")
+    public String userLocation(Model model)
+    {
+        model.addAttribute("list",pharmacyService.listAllPharmacies());
+        return "locateClosest";
     }
 }
