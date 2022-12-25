@@ -19,7 +19,7 @@ public class DataInsert {
 
     @PostConstruct
     public void init() throws FileNotFoundException {
-        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\USER\\Desktop\\final.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\38970\\Desktop\\DIANS\\Domasna-DIANS\\Domashna 3\\tech prototype\\pharmacies-master\\final.txt"));
       // String name, String location, String workingTime, Double lon, Double lat, String phoneNumber, String city, String website
         br.lines().forEach(i->{
                    String [] line = i.split("\\|");
