@@ -72,4 +72,10 @@ public class MainController {
         pharmacyService.savePharmacy(new Pharmacy(name,location,workingTime,lat,lon,phoneNumber,city,website));
         return "search";
     }
+    @GetMapping("/getClosestPharmacy")
+    public String userLocation(Model model)
+    {
+        model.addAttribute("list",pharmacyService.listAllPharmacies());
+        return "locateClosest";
+    }
 }
