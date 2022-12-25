@@ -30,9 +30,8 @@
                 </li>
               </div>
               <div th:if="${session.user!=null}">
-                <li class="nav-item">
-
-                  <a class="nav-link btn btn-warning text-white fw-bold" href="home/add">AddPharmacy</a>
+                <li class="nav-item" style="margin-left: 10px">
+                  <a class="nav-link btn btn-warning text-white fw-bold" href="/home/getClosestPharmacy">Најди најблиска аптека</a>
                 </li>
               </div>
               <div th:if="${session.user!=null}">
@@ -47,7 +46,7 @@
     </nav>
     <div class="h-75 d-flex align-items-center justify-content-around flex-wrap">
       <div>
-        <form th:action="@{home/add}" th:method="POST">
+        <form th:action="@{/home/add}" th:method="POST">
           <h1 class="text-center mb-4">Ставете го името и адресата на аптеката.</h1>
           <div class="mb-3">
             <input type="text" class="form-control" placeholder="Име" name="name" required>
