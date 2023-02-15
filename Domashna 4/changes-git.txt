@@ -1,0 +1,8 @@
+Add or update the Azure App Service build and deployment workflow config
+Change mappings of MainController
+data insert chenge hh
+Add goto on every location
+Optimized javascript functions and added security for login and register of users
+changed database config
+Changed homepage added image, and also added the functionality to add marker on the map while adding new pharmacy
+Added a master template for the html pages, and took out all the javascript functionalities to a single file.

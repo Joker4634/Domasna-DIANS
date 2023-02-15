@@ -1,0 +1,28 @@
+<div class="h-75 d-flex flex-wrap align-items-center justify-content-center">
+    <form class="w-25" th:method="POST" th:action="@{/login}">
+        <div class="d-flex justify-content-center">
+            <img th:src="@{/images/register_logo.png}" alt="Register Logo" class="w-auto h-auto">
+        </div>
+        <h1 class="text-center mb-4">LogIn</h1>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="username" id="email">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="password">
+        </div>
+        <div class="mb-3 d-flex flex-wrap justify-content-around">
+            <div>
+                <input type="checkbox" name="" id="remember">
+                <label for="remember" class="form-label">Remember me</label>
+            </div>
+            <div>
+                <a href="#" class="text-decoration-none">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="mb-3 d-flex justify-content-center">
+            <input class="btn btn-primary mx-3" type="submit" value="LogIn">
+        </div>
+    </form>
+</div>
